@@ -1,10 +1,8 @@
 import qrcode
 
-# Đường dẫn trang web của bạn (Sau khi bạn đã upload file html lên mạng)
-# Nếu chưa có, bạn có thể thử với một link ảnh online hoặc link video kỷ niệm
-url = "https://your-valentines-link.com" 
+# Link GitHub Pages lấy từ ảnh của bạn
+url = "https://vuhuyhung-1708.github.io/valentine-2026/" 
 
-# Cấu hình QR code
 qr = qrcode.QRCode(
     version=1,
     error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -14,9 +12,9 @@ qr = qrcode.QRCode(
 qr.add_data(url)
 qr.make(fit=True)
 
-# Tạo ảnh QR với màu sắc lãng mạn
-img = qr.make_image(fill_color="#ff4d4d", back_color="white")
+# Tạo ảnh QR với màu đỏ cho đúng tinh thần Valentine
+img = qr.make_image(fill_color="#e63946", back_color="white")
 
-# Lưu file
-img.save("valentine_qr.png")
-print("Đã tạo xong mã QR 'valentine_qr.png'. Hãy gửi nó cho người ấy nhé!")
+# Lưu file ảnh
+img.save("valentine_qr_final.png")
+print("Đã tạo xong mã QR! Hãy quét thử để tận hưởng thành quả nhé.")
